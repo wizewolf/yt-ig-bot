@@ -1,7 +1,7 @@
 import OpenAI from "openai";
-import { IaService } from "./TextIaService.js";
+import { AIService } from "./TextAIService.js";
 
-export class OpenAIService extends IaService {
+export class OpenAIService extends AIService {
   constructor() {
     super();
     this.client = new OpenAI({

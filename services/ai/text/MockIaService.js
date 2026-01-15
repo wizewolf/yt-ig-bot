@@ -1,4 +1,4 @@
-import { IaService } from "./TextIaService.js";
+import { AIService } from "./TextAIService.js";
 
 export class MockIaService extends IaService {
   async generateIdeas() {

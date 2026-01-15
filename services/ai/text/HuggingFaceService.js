@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
-import { IaService } from "./TextIaService.js";
+import { AIService } from "./TextAIService.js";
 
-export class HuggingFaceService extends IaService {
+export class HuggingFaceService extends AIService {
   async generateIdeas(video) {
     return {
       images: [
