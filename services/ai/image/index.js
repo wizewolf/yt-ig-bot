@@ -1,4 +1,4 @@
-import { ReplicateImage } from "./ReplicateImage.js";
+import { ReplicateImage } from "./ReplicateImageService.js";
 import { MockImage } from "./MockImage.js";
 
 export function createImageAiService() {

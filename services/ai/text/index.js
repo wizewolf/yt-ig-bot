@@ -1,4 +1,4 @@
-import { OpenAIService } from "./OpenAIService.js";
+import { OpenAIService } from "./ ";
 import { HuggingFaceService } from "./HuggingFaceService.js";
 import { MockIaService } from "./MockIaService.js";
 
