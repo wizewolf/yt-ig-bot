@@ -1,13 +1,13 @@
 import express from "express";
-import { createTextAiService } from "./services/ai/text/index.js";
-import { createImageAiService } from "./services/ai/image/index.js";
+import { createTextAIService } from "./services/ai/text/index.js";
+import { createImageAIService } from "./services/ai/image/index.js";
 
 const app = express();
 app.use(express.json());
 
 // 🧠 Inyección de dependencias (como ServiceProvider)
-const textAiService = createTextAiService();
-const imageAiService = createImageAiService();
+const textAIService = createTextAIService();
+const imageAIService = createImageAIService();
 
 app.post("/webhook/youtube", async (req, res) => {
   try {
@@ -22,7 +22,7 @@ app.post("/webhook/youtube", async (req, res) => {
     // 1️⃣ IA DE TEXTO
     // ============================
     console.log("🧠 Generando ideas de texto...");
-    const textIdeas = await textAiService.generateIdeas(video);
+    const textIdeas = await textAIService.generateIdeas(video);
 
     /*
       textIdeas = {
@@ -37,7 +37,7 @@ app.post("/webhook/youtube", async (req, res) => {
     // 2️⃣ IA DE IMÁGENES
     // ============================
     console.log("🖼 Generando imágenes...");
-    const images = await imageAiService.generateImages(textIdeas.images);
+    const images = await imageAIService.generateImages(textIdeas.images);
 
     /*
       images = [
