@@ -1,9 +1,9 @@
-import { OpenAIService } from "./ ";
+import { OpenAIService } from "./OpenAIService.js";
 import { HuggingFaceService } from "./HuggingFaceService.js";
 import { MockIaService } from "./MockIaService.js";
 
 export function createIaService() {
-  switch (process.env.IA_PROVIDER) {
+  switch (process.env.TEXT_AI_PROVIDER) {
     case "openai":
       return new OpenAIService();
     case "huggingface":
