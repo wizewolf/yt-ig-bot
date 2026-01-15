@@ -1,5 +1,5 @@
 import { ImageAiService } from "./ImageAiService.js";
-//block
+
 export class MockImage extends ImageAiService {
   async generateImages(prompts) {
     return prompts.map((p, i) => ({
